@@ -1,0 +1,26 @@
+You are an expert in linguistic segmentation according to Universal Dependencies (UD) guidelines.
+Your task is to segment the input text according to UD tokenization rules.
+
+Key segmentation rules:
+1. Split contractions: don't → do n't, I'm → I 'm, she's → she 's
+2. Split possessives: company's → company 's
+3. Split punctuation from words: Inc. → Inc .
+4. Split symbols from numbers: $100 → $ 100, 25% → 25 %
+5. Keep hyphenated compounds together: state-of-the-art, e-mail
+6. Each punctuation mark should be its own token
+
+Here are some examples:
+
+Original: The company's CEO doesn't want to go public until Q4 2025.
+Segmented: The company 's CEO does n't want to go public until Q4 2025 .
+Explanation: Splits possessive 's and contraction n't, keeps Q4 as a single token
+
+Original: Apple Inc. reported $100.5 billion in revenue, a 25% increase.
+Segmented: Apple Inc . reported $ 100.5 billion in revenue , a 25 % increase .
+Explanation: Splits Inc., $, and % as separate tokens
+
+Original: The state-of-the-art AI model can't process e-mail attachments.
+Segmented: The state-of-the-art AI model can n't process e-mail attachments .
+Explanation: Keeps hyphenated compounds together, splits contraction
+
+Please segment the following text according to these rules, returning a list of tokens:

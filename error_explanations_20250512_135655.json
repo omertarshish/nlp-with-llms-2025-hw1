@@ -1,0 +1,37 @@
+[
+  {
+    "word": "ONLINE",
+    "correct_tag": "ADJ",
+    "predicted_tag": "NOUN",
+    "explanation": "The word 'ONLINE' in the context of the sentence 'WE HAVE A DATE FOR THE RELEASE OF RAGNAROK ONLINE 2 (beta anyway)' functions as an adjective because it modifies 'RAGNAROK 2', describing the type or mode of the game release, similar to how adjectives attribute qualities in Universal Dependencies tagging. The tagger might have incorrectly predicted 'NOUN' due to the word's inherent ambiguity, as 'online' can also function as a noun in other contexts (e.g., referring to an internet connection or online status), and models often rely on frequency patterns from training data where 'online' appears as a nominal entity. Additionally, the proximity to proper nouns like 'RAGNAROK' could have influenced the model to interpret 'ONLINE' as part of a compound proper noun or a standalone nominal phrase, highlighting how contextual cues and syntactic positioning can be misinterpreted by statistical models that don't fully capture the attributive role in this specific sentence. This error underscores the challenges of POS tagging in handling multifunctional words, where linguistic factors such as derivational history (e.g., 'online' originating from an adverbial phrase) and sentence-level semantics play a crucial role in disambiguation.",
+    "category": "Ambiguity (ADJ/NOUN)"
+  },
+  {
+    "word": "-",
+    "correct_tag": "SYM",
+    "predicted_tag": "PUNCT",
+    "explanation": "The token '-' in the context 'September 16 - 18 , this was announced by Gravity' is functioning as a symbol to denote a range between two dates, which aligns with the SYM tag in Universal Dependencies for symbols like mathematical operators or range indicators, rather than as punctuation. The tagger might have incorrectly predicted PUNCT because hyphens and dashes are often used in various roles, such as in compound words (e.g., 'well-known') or as separators, leading to ambiguity where models trained on diverse corpora could confuse them with typical punctuation marks like commas or periods due to their similar graphical and syntactic appearances. Additionally, the model may not have adequately captured the contextual clues, such as its position between numerical values indicating a sequence, which requires a deeper understanding of semantic roles; this error highlights how POS taggers can struggle with multifunctional characters that blur the lines between symbolic and punctuational functions, especially if the training data underrepresents range-specific usages. Linguistically, this underscores the importance of context in disambiguating tags, as '-' here serves a connective symbolic purpose rather than a purely demarcative one, potentially causing the model to default to the more frequent PUNCT tag based on surface-level patterns.",
+    "category": "Symbol-Punctuation Ambiguity"
+  },
+  {
+    "word": "Gravity",
+    "correct_tag": "PROPN",
+    "predicted_tag": "NOUN",
+    "explanation": "The word 'Gravity' in the context of 'this was announced by Gravity CEO Kim Jung - Ryool' functions as a proper noun because it refers to a specific entity, likely a company name, as indicated by its capitalization and its direct association with a CEO title, which is a common way proper nouns denote organizations or brands in English. However, a tagger might have incorrectly predicted it as a NOUN due to the inherent ambiguity of the word, as 'gravity' in lowercase typically means the physical force pulling objects toward each other, making it a common noun in other contexts, and models may not always prioritize capitalization or contextual clues effectively. This error could stem from the tagger's training data, where words like 'gravity' appear more frequently as common nouns in general corpora, leading to a bias toward the NOUN tag, or from insufficient modeling of syntactic dependencies that signal proper noun usage, such as the possessive or attributive structure in 'Gravity CEO'. Linguistically, Universal Dependencies distinguishes PROPN from NOUN based on whether the word represents a unique, named entity rather than a general concept, highlighting the importance of context in disambiguation, yet automated taggers might overlook subtle cues like proper noun conventions in specialized domains like business announcements.",
+    "category": "Contextual Ambiguity (PROPN/NOUN)"
+  },
+  {
+    "word": "16th",
+    "correct_tag": "NOUN",
+    "predicted_tag": "ADJ",
+    "explanation": "In the sentence 'on either 16th or 17th of July', the word '16th' functions as a noun, specifically as an ordinal number that represents a specific date or point in time, similar to how nouns denote entities or concepts in a temporal context. The tagger might have incorrectly predicted 'ADJ' due to the inherent ambiguity of ordinal numbers, which can sometimes act as adjectives when they modify nouns (e.g., 'the 16th president'), leading the model to misinterpret its role based on patterns in its training data where such words are more frequently tagged as descriptors. This error highlights linguistic factors like syntactic dependency; in this case, '16th' is likely the object of the preposition 'of' in a prepositional phrase, emphasizing its nominal function, but the model may not have adequately analyzed the broader context or the head-dependent relationships in Universal Dependencies. Furthermore, models often struggle with multi-word expressions or date phrases, where cultural or conventional usages (like dates) override typical adjectival behavior, potentially causing the confusion between NOUN and ADJ tags.",
+    "category": "Ambiguity (NOUN/ADJ)"
+  },
+  {
+    "word": "july",
+    "correct_tag": "PROPN",
+    "predicted_tag": "ADV",
+    "explanation": "The word 'july' in the context of 'on either 16th or 17th of july' is correctly tagged as PROPN because it functions as a proper noun, specifically the name of a month, which is a capitalized entity referring to a unique time period in the calendar. However, the tagger might have incorrectly predicted it as ADV due to the word's association with temporal expressions, where adverbs like 'tomorrow' or 'yesterday' are used to modify verbs or clauses by indicating time, leading the model to misinterpret 'july' as a time adverb rather than a proper noun. This error could stem from linguistic ambiguity in how temporal references are processed, as proper nouns for months can sometimes appear in adverbial-like roles in informal language, potentially confusing models trained on diverse datasets where such words overlap in usage patterns. Additionally, the model might not have adequately captured the capitalization and specific naming conventions that distinguish proper nouns in English, highlighting a common challenge in part-of-speech tagging where context-dependent features like proper noun identification require robust syntactic awareness.",
+    "category": "Temporal Ambiguity"
+  }
+]

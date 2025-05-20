@@ -1,0 +1,287 @@
+{
+  "Ambiguity (ADJ/NOUN)": [
+    {
+      "sentence": "The bright light illuminated the dark room.",
+      "challenging_words": [
+        {
+          "word": "bright",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NOUN",
+          "explanation": "The word 'bright' functions as an adjective describing 'light', but it could be misinterpreted as a noun (e.g., a type of person or event) due to its potential nominal use in other contexts."
+        }
+      ]
+    },
+    {
+      "sentence": "She wore a fast dress to the party.",
+      "challenging_words": [
+        {
+          "word": "fast",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Fast' is an adjective modifying 'dress' (meaning quick-drying or stylishly swift), but models might tag it as a noun (e.g., a period of abstinence) based on common usages."
+        }
+      ]
+    },
+    {
+      "sentence": "The clean water source was essential for survival.",
+      "challenging_words": [
+        {
+          "word": "clean",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Clean' acts as an adjective describing 'water', yet it could be confused for a noun (e.g., a cleaning product) in ambiguous contexts."
+        }
+      ]
+    },
+    {
+      "sentence": "He is a hard worker in the office.",
+      "challenging_words": [
+        {
+          "word": "hard",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Hard' is an adjective modifying 'worker', but it might be mistakenly tagged as a noun (e.g., a difficult substance) due to its dual part-of-speech possibilities."
+        }
+      ]
+    },
+    {
+      "sentence": "The green grass grew quickly after the rain.",
+      "challenging_words": [
+        {
+          "word": "green",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Green' describes 'grass' as an adjective, but it could be erroneously tagged as a noun (e.g., the color or an environmental movement) without proper context."
+        }
+      ]
+    }
+  ],
+  "Symbol-Punctuation Ambiguity": [
+    {
+      "sentence": "The price is $50, which is a great deal.",
+      "challenging_words": [
+        {
+          "word": "$",
+          "correct_tag": "SYM",
+          "likely_error_tag": "PUNCT",
+          "explanation": "The symbol '$' represents currency and should be tagged as a symbol, but it might be mistaken for punctuation due to its graphical similarity to other marks."
+        }
+      ]
+    },
+    {
+      "sentence": "Please send an e-mail to john@example.com.",
+      "challenging_words": [
+        {
+          "word": "@",
+          "correct_tag": "SYM",
+          "likely_error_tag": "PUNCT",
+          "explanation": "'@' is a symbol in the email address, but it could be incorrectly tagged as punctuation because it functions as a separator in strings."
+        }
+      ]
+    },
+    {
+      "sentence": "The file name is report-2023.pdf.",
+      "challenging_words": [
+        {
+          "word": "-",
+          "correct_tag": "PUNCT",
+          "likely_error_tag": "SYM",
+          "explanation": "The hyphen '-' is punctuation separating parts of the file name, but it might be confused for a symbol in technical contexts like dates or codes."
+        }
+      ]
+    },
+    {
+      "sentence": "He scored 100% on the test.",
+      "challenging_words": [
+        {
+          "word": "%",
+          "correct_tag": "SYM",
+          "likely_error_tag": "PUNCT",
+          "explanation": "'%' is a symbol for percentage, yet it could be misclassified as punctuation due to its use in indicating ratios or modifiers."
+        }
+      ]
+    },
+    {
+      "sentence": "The hashtag #UDConference trended online.",
+      "challenging_words": [
+        {
+          "word": "#",
+          "correct_tag": "SYM",
+          "likely_error_tag": "PUNCT",
+          "explanation": "The hashtag symbol '#' is a symbol prefixing a topic, but it might be tagged as punctuation because it resembles other typographical marks."
+        }
+      ]
+    }
+  ],
+  "Contextual Ambiguity (PROPN/NOUN)": [
+    {
+      "sentence": "The band Spring performed at the local venue.",
+      "challenging_words": [
+        {
+          "word": "Spring",
+          "correct_tag": "PROPN",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Spring' refers to a proper noun (a band name), but in contexts discussing seasons, it could be mistakenly tagged as a common noun."
+        }
+      ]
+    },
+    {
+      "sentence": "Apple released a new product last week.",
+      "challenging_words": [
+        {
+          "word": "Apple",
+          "correct_tag": "PROPN",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Apple' is a proper noun for the company, yet it might be confused with the common noun for the fruit without clear context."
+        }
+      ]
+    },
+    {
+      "sentence": "Ford drives innovation in the automotive industry.",
+      "challenging_words": [
+        {
+          "word": "Ford",
+          "correct_tag": "PROPN",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Ford' is a proper noun (company name), but it could be misinterpreted as a common noun (e.g., a river crossing) in less specific sentences."
+        }
+      ]
+    },
+    {
+      "sentence": "The author Washington wrote many famous books.",
+      "challenging_words": [
+        {
+          "word": "Washington",
+          "correct_tag": "PROPN",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Washington' is a proper noun (referring to a person), but it might be tagged as a common noun if associated with the state or city."
+        }
+      ]
+    },
+    {
+      "sentence": "Starbucks coffee is popular worldwide.",
+      "challenging_words": [
+        {
+          "word": "Starbucks",
+          "correct_tag": "PROPN",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Starbucks' is a proper noun (brand name), yet it could be erroneously tagged as a common noun for a type of coffee shop."
+        }
+      ]
+    }
+  ],
+  "Ambiguity (NOUN/ADJ)": [
+    {
+      "sentence": "The daily routine included a long walk.",
+      "challenging_words": [
+        {
+          "word": "daily",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Daily' is an adjective modifying 'routine', but it could be mistaken for a noun (e.g., a newspaper) in certain idiomatic uses."
+        }
+      ]
+    },
+    {
+      "sentence": "She owns a pure gold necklace.",
+      "challenging_words": [
+        {
+          "word": "pure",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Pure' describes 'gold' as an adjective, yet it might be tagged as a noun (e.g., something unadulterated) due to its standalone potential."
+        }
+      ]
+    },
+    {
+      "sentence": "The open door invited fresh air.",
+      "challenging_words": [
+        {
+          "word": "open",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Open' is an adjective describing 'door', but it could be confused for a noun (e.g., an event like an open house)."
+        }
+      ]
+    },
+    {
+      "sentence": "He preferred the soft fabric for his shirt.",
+      "challenging_words": [
+        {
+          "word": "soft",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Soft' modifies 'fabric' as an adjective, though it might be incorrectly tagged as a noun (e.g., a type of drink)."
+        }
+      ]
+    },
+    {
+      "sentence": "The free service was appreciated by all.",
+      "challenging_words": [
+        {
+          "word": "free",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NOUN",
+          "explanation": "'Free' is an adjective describing 'service', but it could be mis-tagged as a noun (e.g., a liberty or giveaway item)."
+        }
+      ]
+    }
+  ],
+  "Temporal Ambiguity": [
+    {
+      "sentence": "The past event shaped her future decisions.",
+      "challenging_words": [
+        {
+          "word": "past",
+          "correct_tag": "NOUN",
+          "likely_error_tag": "ADJ",
+          "explanation": "'Past' is a noun referring to a previous event, but it could be mistaken for an adjective (e.g., describing something historical)."
+        }
+      ]
+    },
+    {
+      "sentence": "We will meet in the spring season.",
+      "challenging_words": [
+        {
+          "word": "spring",
+          "correct_tag": "NOUN",
+          "likely_error_tag": "VERB",
+          "explanation": "'Spring' is a noun for the season, yet it might be tagged as a verb (e.g., to jump) in contexts implying action."
+        }
+      ]
+    },
+    {
+      "sentence": "His run in the morning was refreshing.",
+      "challenging_words": [
+        {
+          "word": "run",
+          "correct_tag": "NOUN",
+          "likely_error_tag": "VERB",
+          "explanation": "'Run' refers to an activity as a noun, but it could be confused for a verb (e.g., to jog) due to its temporal routine context."
+        }
+      ]
+    },
+    {
+      "sentence": "The future holds many uncertainties.",
+      "challenging_words": [
+        {
+          "word": "future",
+          "correct_tag": "NOUN",
+          "likely_error_tag": "ADJ",
+          "explanation": "'Future' is a noun indicating time ahead, but it might be erroneously tagged as an adjective (e.g., describing events)."
+        }
+      ]
+    },
+    {
+      "sentence": "She arrived late, missing the early show.",
+      "challenging_words": [
+        {
+          "word": "early",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "ADV",
+          "explanation": "'Early' is an adjective describing 'show', but in temporal contexts, it could be mis-tagged as an adverb (e.g., arriving early)."
+        }
+      ]
+    }
+  ]
+}

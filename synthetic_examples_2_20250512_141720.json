@@ -1,0 +1,114 @@
+{
+  "examples": [
+    {
+      "sentence": "The clean energy project in Clean City is innovative.",
+      "complete_pos_tagging": [
+        [
+          "The",
+          "DET"
+        ],
+        [
+          "clean",
+          "ADJ"
+        ],
+        [
+          "energy",
+          "NOUN"
+        ],
+        [
+          "project",
+          "NOUN"
+        ],
+        [
+          "in",
+          "ADP"
+        ],
+        [
+          "Clean",
+          "PROPN"
+        ],
+        [
+          "City",
+          "PROPN"
+        ],
+        [
+          "is",
+          "AUX"
+        ],
+        [
+          "innovative",
+          "ADJ"
+        ]
+      ],
+      "challenging_words": [
+        {
+          "word": "clean",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "VERB",
+          "error_category": "Ambiguity (ADJ/NOUN)",
+          "explanation": "The word 'clean' can function as a verb (e.g., to clean something) or an adjective, making it challenging for models to distinguish in context, potentially mistagging it as VERB instead of ADJ."
+        },
+        {
+          "word": "Clean",
+          "correct_tag": "PROPN",
+          "likely_error_tag": "ADJ",
+          "error_category": "Proper Noun Recognition",
+          "explanation": "Capitalized words like 'Clean' in proper nouns (e.g., a place name) might be mistaken for common adjectives due to similar lowercase forms, leading to incorrect tagging as ADJ rather than PROPN."
+        }
+      ]
+    },
+    {
+      "sentence": "The first runner ran fast and won easily.",
+      "complete_pos_tagging": [
+        [
+          "The",
+          "DET"
+        ],
+        [
+          "first",
+          "ADJ"
+        ],
+        [
+          "runner",
+          "NOUN"
+        ],
+        [
+          "ran",
+          "VERB"
+        ],
+        [
+          "fast",
+          "ADV"
+        ],
+        [
+          "and",
+          "CCONJ"
+        ],
+        [
+          "won",
+          "VERB"
+        ],
+        [
+          "easily",
+          "ADV"
+        ]
+      ],
+      "challenging_words": [
+        {
+          "word": "first",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NUM",
+          "error_category": "Numeral vs. Adjective Confusion",
+          "explanation": "Words like 'first' can be ordinal numbers or adjectives, and models might confuse it with a numeral tag due to its numerical ordering function, especially in sequences."
+        },
+        {
+          "word": "fast",
+          "correct_tag": "ADV",
+          "likely_error_tag": "ADJ",
+          "error_category": "Adverb vs. Adjective Confusion",
+          "explanation": "'Fast' can serve as an adjective (e.g., a fast car) or adverb (e.g., ran fast), and without clear context, models may incorrectly tag it as ADJ when it's modifying a verb."
+        }
+      ]
+    }
+  ]
+}

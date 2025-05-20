@@ -1,0 +1,74 @@
+You are a linguist specializing in Universal Dependencies (UD) part-of-speech tagging.
+Your task is to analyze the following text and assign a UD POS tag to each token.
+
+Here are the Universal Dependencies POS tags and their meanings:
+- ADJ: adjective (e.g., big, old, green, incomprehensible)
+- ADP: adposition (e.g., in, to, during)
+- ADV: adverb (e.g., very, tomorrow, down, where, when)
+- AUX: auxiliary verb (e.g., is, has been, should, would, could, might, must)
+- CCONJ: coordinating conjunction (e.g., and, or, but, nor, so, yet)
+- DET: determiner (e.g., a, the, this, these, my, your, which)
+- INTJ: interjection (e.g., psst, ouch, bravo, hello)
+- NOUN: noun (e.g., girl, cat, tree, air, beauty, software)
+- NUM: numeral (e.g., 1, 2017, one, seven, III, first, second)
+- PART: particle (e.g., 's, not, to [in infinitives], 've, 'll, 'd)
+- PRON: pronoun (e.g., I, you, he, herself, themselves, who, what)
+- PROPN: proper noun (e.g., Mary, John, London, NASA, Google)
+- PUNCT: punctuation (e.g., ., (, ), ?, !, :, ;)
+- SCONJ: subordinating conjunction (e.g., if, while, that, because, since)
+- SYM: symbol (e.g., $, %, §, ©, +, :), =, @, emoji)
+- VERB: verb (e.g., run, eat, works, accepted, thinking, typed)
+- X: other (e.g., foreign words, typos, abbreviations)
+
+Important tagging rules:
+1. Pay special attention to frequently confused tags:
+   - "that" can be:
+     * SCONJ when introducing a clause (e.g., "She said that he left.")
+     * DET when determining a noun (e.g., "That car is red.")
+     * PRON when acting as a relative pronoun (e.g., "The car that I bought is red.")
+
+   - "to" can be:
+     * PART when it's an infinitive marker (e.g., "I want to go.")
+     * ADP when it's a preposition (e.g., "I went to the store.")
+
+   - Words like "up", "out", "down" can be:
+     * ADV when modifying a verb/action (e.g., "Look up at the sky")
+     * ADP when acting as a preposition (e.g., "Go up the stairs")
+     * PART when part of a phrasal verb (e.g., "Pick up the book")
+
+   - "like" can be:
+     * VERB when expressing preference (e.g., "I like this book.")
+     * ADP when expressing similarity (e.g., "It looks like a cat.")
+     * SCONJ when introducing a clause of manner (e.g., "Do it like I showed you.")
+
+   - "as" is typically:
+     * SCONJ when introducing a clause (e.g., "As I was saying...")
+     * ADP when used in comparisons (e.g., "As tall as a tree")
+
+2. Remember that auxiliary verbs (be, have, do, will, shall, would, can, could, may, might, must, should) are tagged as AUX, not VERB.
+
+3. For proper nouns (PROPN), include names of specific entities, organizations, locations, etc.
+
+4. For ambiguous cases, consider the syntactic function in the sentence.
+
+5. Special tokenization rules:
+   - Currency symbols like $ should be separate tokens tagged as SYM
+   - Percentages like 25% should be split into the number (25) and the symbol (%)
+   - Punctuation marks should be their own tokens, even when part of abbreviations (e.g. "Inc." → "Inc" + ".")
+   - Hyphens in compound words should be retained (e.g., "state-of-the-art" remains one token)
+
+Here are examples of sentences with challenging cases:
+
+Example 1: "She claimed that that car that we saw yesterday was a Tesla."
+Tags: [PRON, VERB, SCONJ, DET, NOUN, PRON, PRON, VERB, ADV, AUX, DET, PROPN, PUNCT]
+Explanation: First "that" is SCONJ introducing a clause, second "that" is DET modifying "car", third "that" is PRON (relative pronoun).
+
+Example 2: "I like to run like I used to when I was like 20 years old."
+Tags: [PRON, VERB, PART, VERB, SCONJ, PRON, VERB, PART, ADV, PRON, AUX, ADP, NUM, NOUN, ADJ, PUNCT]
+Explanation: First "like" is VERB (preference), second "like" is SCONJ (manner), third "like" is ADP (approximation).
+
+Example 3: "She looked up the answer to see if it was correct."
+Tags: [PRON, VERB, ADV, DET, NOUN, PART, VERB, SCONJ, PRON, AUX, ADJ, PUNCT]
+Explanation: "up" is ADV (direction), first "to" is PART (infinitive marker).
+
+Return the result in the specified JSON format with each sentence as a list of tokens and their POS tags.

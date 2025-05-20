@@ -1,0 +1,261 @@
+{
+  "examples": [
+    {
+      "sentence": "The clean Nike campaign won awards.",
+      "complete_pos_tagging": [
+        [
+          "The",
+          "DET"
+        ],
+        [
+          "clean",
+          "ADJ"
+        ],
+        [
+          "Nike",
+          "PROPN"
+        ],
+        [
+          "campaign",
+          "NOUN"
+        ],
+        [
+          "won",
+          "VERB"
+        ],
+        [
+          "awards",
+          "NOUN"
+        ],
+        [
+          ".",
+          "PUNCT"
+        ]
+      ],
+      "challenging_words": [
+        {
+          "word": "clean",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NOUN",
+          "error_category": "Ambiguity (ADJ/NOUN)",
+          "explanation": " 'Clean' can function as a noun in specific contexts, such as in sports (e.g., a clean hit), leading to potential mis-tagging as a noun instead of an adjective describing the campaign."
+        },
+        {
+          "word": "Nike",
+          "correct_tag": "PROPN",
+          "likely_error_tag": "NOUN",
+          "error_category": "Proper Noun Recognition",
+          "explanation": " 'Nike' is a proper noun as a brand name, but it might be incorrectly tagged as a common noun due to its capitalization and potential confusion with similar-sounding common words."
+        }
+      ]
+    },
+    {
+      "sentence": "The first fast runner crossed the finish line.",
+      "complete_pos_tagging": [
+        [
+          "The",
+          "DET"
+        ],
+        [
+          "first",
+          "ADJ"
+        ],
+        [
+          "fast",
+          "ADJ"
+        ],
+        [
+          "runner",
+          "NOUN"
+        ],
+        [
+          "crossed",
+          "VERB"
+        ],
+        [
+          "the",
+          "DET"
+        ],
+        [
+          "finish",
+          "NOUN"
+        ],
+        [
+          "line",
+          "NOUN"
+        ],
+        [
+          ".",
+          "PUNCT"
+        ]
+      ],
+      "challenging_words": [
+        {
+          "word": "first",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "NUM",
+          "error_category": "Numeral vs. Adjective Confusion",
+          "explanation": " 'First' can be interpreted as a numeral in ordinal contexts (e.g., first place), making it prone to mis-tagging as a numeral rather than an adjective modifying 'runner'."
+        },
+        {
+          "word": "fast",
+          "correct_tag": "ADJ",
+          "likely_error_tag": "ADV",
+          "error_category": "Adverb vs. Adjective Confusion",
+          "explanation": " 'Fast' commonly functions as an adverb (e.g., run fast), so it might be incorrectly tagged as an adverb here instead of an adjective describing 'runner'."
+        }
+      ]
+    },
+    {
+      "sentence": "To succeed, you must work hard.",
+      "complete_pos_tagging": [
+        [
+          "To",
+          "PART"
+        ],
+        [
+          "succeed",
+          "VERB"
+        ],
+        [
+          ",",
+          "PUNCT"
+        ],
+        [
+          "you",
+          "PRON"
+        ],
+        [
+          "must",
+          "AUX"
+        ],
+        [
+          "work",
+          "VERB"
+        ],
+        [
+          "hard",
+          "ADV"
+        ],
+        [
+          ".",
+          "PUNCT"
+        ]
+      ],
+      "challenging_words": [
+        {
+          "word": "To",
+          "correct_tag": "PART",
+          "likely_error_tag": "ADP",
+          "error_category": "Particle vs. Adposition",
+          "explanation": " 'To' in this infinitive construction is a particle, but it could be mis-tagged as an adposition due to its frequent use in prepositional phrases (e.g., to the store)."
+        },
+        {
+          "word": "must",
+          "correct_tag": "AUX",
+          "likely_error_tag": "VERB",
+          "error_category": "Auxiliary vs. Main Verb",
+          "explanation": " 'Must' is an auxiliary verb indicating obligation, but it might be confused with a main verb in contexts where modal verbs overlap with action verbs."
+        }
+      ]
+    },
+    {
+      "sentence": "Apple stock rose, while Google fell.",
+      "complete_pos_tagging": [
+        [
+          "Apple",
+          "PROPN"
+        ],
+        [
+          "stock",
+          "NOUN"
+        ],
+        [
+          "rose",
+          "VERB"
+        ],
+        [
+          ",",
+          "PUNCT"
+        ],
+        [
+          "while",
+          "SCONJ"
+        ],
+        [
+          "Google",
+          "PROPN"
+        ],
+        [
+          "fell",
+          "VERB"
+        ],
+        [
+          ".",
+          "PUNCT"
+        ]
+      ],
+      "challenging_words": [
+        {
+          "word": "Apple",
+          "correct_tag": "PROPN",
+          "likely_error_tag": "NOUN",
+          "error_category": "Proper Noun vs. Common Noun",
+          "explanation": " 'Apple' is a proper noun as a company name, but it could be mis-tagged as a common noun (e.g., the fruit), especially without clear context."
+        },
+        {
+          "word": "while",
+          "correct_tag": "SCONJ",
+          "likely_error_tag": "CCONJ",
+          "error_category": "Subordinating vs. Coordinating Conjunction",
+          "explanation": " 'While' here introduces a subordinate clause, but it might be incorrectly tagged as a coordinating conjunction due to its similarity to words like 'and' or 'but' in casual usage."
+        }
+      ]
+    },
+    {
+      "sentence": "That car costs $500.",
+      "complete_pos_tagging": [
+        [
+          "That",
+          "DET"
+        ],
+        [
+          "car",
+          "NOUN"
+        ],
+        [
+          "costs",
+          "VERB"
+        ],
+        [
+          "$",
+          "SYM"
+        ],
+        [
+          "500",
+          "NUM"
+        ],
+        [
+          ".",
+          "PUNCT"
+        ]
+      ],
+      "challenging_words": [
+        {
+          "word": "That",
+          "correct_tag": "DET",
+          "likely_error_tag": "PRON",
+          "error_category": "Determiner vs. Pronoun",
+          "explanation": " 'That' functions as a determiner here (referring to a specific car), but it could be mis-tagged as a pronoun if the context is ambiguous (e.g., as in 'That is good')."
+        },
+        {
+          "word": "$",
+          "correct_tag": "SYM",
+          "likely_error_tag": "PUNCT",
+          "error_category": "Symbol-Punctuation Ambiguity",
+          "explanation": " '$' is a symbol for currency, but it resembles punctuation marks, leading to potential mis-tagging as punctuation rather than a symbolic element."
+        }
+      ]
+    }
+  ]
+}
